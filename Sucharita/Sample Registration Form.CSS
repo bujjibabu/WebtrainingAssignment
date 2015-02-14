@@ -1,0 +1,23 @@
+.bigdiv {
+  	  background-color: #9966ff;
+  	  margin-top: 100px;
+  	  margin-left: 500px;
+  	  width: 500px; 
+  	  height: 600px
+  }
+  .head1{  
+  	   margin-left: 120px;
+       border-bottom: 1px solid black; 
+  }
+  span{
+  	     margin-left: 80px;
+  }
+  .bid1{
+  	     text-align: center;
+  }
+  .Smalldiv{
+             margin-left: 80px;    
+  }
+  .lowerdiv{
+  	         text-align: center;  
+  }
