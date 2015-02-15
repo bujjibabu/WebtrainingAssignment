@@ -1,0 +1,159 @@
+<!docTYPE html>
+<html>
+<head>
+	<style type="text/css">
+.ul,li
+{
+	list-style-type: none;
+	display:inline;
+	padding:1px;
+	color:white;
+
+}
+.menu
+{
+	background-color: darkblue;
+	padding:1px;
+}
+.left
+{
+	float:left;
+}
+.button
+{
+	text-align: right;
+}
+.form
+{
+border:1px solid;
+}
+li:hover
+{
+
+	border-radius: 5px;
+	background-color:green;
+}
+.liborder
+{
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+	</style>
+	</head>
+	<body>
+		<div class="header">
+		<span style="color:darkblue;display:inline;font-size:30px;font-weight:bold">HMM</span>
+		<span style="float:right">DemoUser | LogIn</span>
+		<h4 style="color:darkblue">Hospital Metrics Manager</h4>
+	</div>
+	<div class="menu">
+		<ul class="ul">
+			
+			<li>Insight View</li>
+				<li class="liborder">My profile</li>
+				<li>My attestations</li>
+	    </ul>
+			</div>
+			<p style="background:lightgrey"> Home > Attestation List </p>
+			<span class="menu" style="color:white">My attestation</span>
+			<div class="form">
+			<div class="button">
+				<input type="button" value="Filter">
+				<input type="button" value="New Attestation">
+			</div>
+				<p style="opacity:0.5px">Instruction.Click the filter button to refine the search</p>
+               <div style="background:lightgrey">
+               	<table>
+               		<tr>
+               			<td style="width:200px">
+               				Attestation Form:
+               			</td>
+               			<td>
+               				<select style="width:200px">
+               					<option >All</option>
+               				</select>
+               			</td>
+               		</tr>
+               		<tr>
+               			<td style="width:200px">
+               				Panel patient:
+               			</td>
+               			<td>
+               				<select style="width:200px">
+               					<option>All</option>
+               				</select>
+               			</td>
+               		</tr>
+               	</table>
+               </div>
+               	<p style="color:skyblue">Attestation List</p>
+               	<br>
+               	<p style="opacity:0.5">click attestation form cell to view form details</p>
+               	<table border="1" cellspacing="0">
+               	<tr style="background:grey">
+               	<td>Detail</td>
+				<td>Attestation Form</td>
+				<td>For Provider</td>
+				<td>Is Rendering Provider</td>
+				<td>Patient</td>
+				<td>Encounter Date</td>
+				<td>Attested By</td>
+				<td>Date Created</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>15.PNEUMOVAX</td>
+				<td>Barrie</td>
+				<td>NO</td>
+				<td>Patient 6,Male</td>
+				<td>06/25/2013</td>
+				<td>Admin System[System Admin]</td>
+				<td>2013-06-26 15:34:39 CDT</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>17. TOBACCO SCREENING (TOBACCO NON USER)</td>
+				<td>Barrie</td>
+				<td>NO</td>
+				<td>Patient 5,Male</td>
+				<td>06/25/2013</td>
+				<td>Admin System[System Admin]</td>
+				<td>2013-06-26 15:34:39 CDT</td>
+			</tr>
+			<tr >
+				<td>3</td>
+				<td>16. WEIGHT SCREENING(ABNORMAL BMI AND FOLLOW-UP</td>
+				<td>Barrie</td>
+				<td>YES</td>
+				<td>Patient 2,Male</td>
+				<td>06/25/2013</td>
+				<td>Admin System[System Admin]</td>
+				<td>2013-06-26 15:34:39 CDT</td>
+			</tr>
+			<tr >
+				<td>4</td>
+				<td>14. INFLUENZA IMMUNIZATION</td>
+				<td>Barrie</td>
+				<td>YES</td>
+				<td>Patient 4,Male</td>
+				<td>06/25/2013</td>
+				<td>Admin System[System Admin]</td>
+				<td>2013-06-26 15:34:39 CDT</td>
+			</tr>
+			<tr >
+				<td>5</td>
+				<td>14. INFLUENZA IMMUNIZATION</td>
+				<td>MC. callister</td>
+				<td>YES</td>
+				<td>Patient 42,Male</td>
+				<td>06/25/2013</td>
+				<td>Admin System[System Admin]</td>
+				<td>2013-06-26 15:34:39 CDT</td>
+			</tr>
+		</table>
+		
+	</div>
+
+</body>
+</html>
