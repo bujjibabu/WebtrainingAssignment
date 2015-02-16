@@ -1,0 +1,32 @@
+.body1st{
+	background-color: #eef3fa;
+}
+.maindiv1{
+	       background-color: white;
+	       height: 600px;
+	       width: 500px;
+	       margin-top: 100px;
+	       margin-left: 500px; 
+
+	       
+}
+.firstspan{
+	        font-size: 20px;
+	        font-weight: bold;
+	        color: red;
+}
+.firsttable{
+              width: 95%;
+              background-color: #ffffcc;
+}
+th{
+	background-color: blue;
+	color: white;
+	text-align: left;
+}
+td{ font-weight: bold; }
+table, th{
+	           border: 1px solid black;
+               border-collapse: collapse;
+}
+.tds1{ text-align: right;}
