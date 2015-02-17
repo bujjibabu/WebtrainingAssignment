@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<title>HMM Login Page </title>
+<style type="text/css">
+body{
+	background-color: #e8e8e8;
+	font-family: Arial;
+}
+.div1{
+	background-color: white;
+	width: 95%px;
+	height: 900px;
+	margin-right: 120px;
+	margin-left: 120px;
+}
+.span1{
+	font-size: 50px;
+	color: #5f6f9c;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-weight: bold;
+}
+.span4{
+		color: #6899d0;
+		border-left: 1px solid black;
+}
+.div1a{
+	float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+.div1b{
+	color: #5f6f9c;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.div1c{
+	   background-color: #5f6f9c;
+	   color: white;
+	   padding: 0.1px;
+	   margin-left: 20px;
+	   margin-right: 20px;
+}
+.div1d{
+	background-color: #f5f5f5;
+	padding: 0.1px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.div1c .ulcls:first-child li{
+	list-style-type: none;
+	display: inline;
+	padding: 15px;
+}
+.div1d .ulcls1:first-child li{
+	list-style-type: none;
+	display: inline;
+	padding: 3px;
+}
+.li1{
+	border-right: 2px solid gray;
+}
+.li2{
+	background-color: #9bd144;
+	border-radius: 100px;
+}
+.span5{
+	background-color: #5f6f9c;
+	color: white;
+	margin-left: 20px;
+	padding: 5px;
+}
+.div1e{
+	border: 3px solid #5f6f9c;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 585px;
+	margin-top: 4px;
+}
+.div1f{
+	float: right;
+	margin-top: 5px;
+    padding: 6px;
+}
+.span6{
+	background-color: #cccccc;
+	border: 3px solid #888888;
+	padding: 3px;
+}
+p{
+	margin-left: 3px;
+	margin-top: 25px;
+	opacity: 0.4;
+}
+.div1g{
+	background-color: #e8e8e8;
+	margin-left: 3px;
+	margin-right: 3px;
+	height: 100px; 
+	margin-top: -12px;
+}
+.table1{
+	margin-left: 30px;
+}
+td{
+	padding: 10px;
+}
+select{
+	width: 200px;
+    height: 30px;
+}
+h2{
+	color:#6899d0;
+	margin-left: 3px;
+}
+.table2 td{border: 1px solid gray;}
+.table2{
+	margin-left: 3px;
+	font-size: 12px;
+	width: 99%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+th{
+	background-color: #888888;
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="div1">
+		<span class="span1"> HMM </span>
+    <div class="div1a">
+        	<span class="span2"><img src="../images for class/User-green-icon.png"></span> &nbsp;
+        	<span class="span3"> Demo User &nbsp;</span>
+        	<span class="span4"> &nbsp; Logout </span>
+    </div>
+    <br>
+    <div class="div1b"> Hospital Metrics Manager</div>
+    <br>
+    <div class="div1c">
+    	<ul class="ulcls">
+    		<li class="li1">Insight View</li>
+    		<li class="li1">My Profile</li>
+    		<li class="li1 li2">My Attestations</li>
+    	</ul>
+    </div>
+    <br>
+    <div class="div1d">
+    	<ul class="ulcls1">
+    		<li>Home</li>
+    		<li style="color:darkgray">&gt;</li>
+    		<li>Attestation List</li>
+    	</ul>
+    </div>
+    <br>
+    <span class="span5"> My Attestations</span>
+    <br>
+    <div class="div1e">
+    	<div class="div1f">
+    		<span class="span6">Filter</span>
+    		<span class="span6">New Attestation</span>
+    	</div>
+     <p> Instruction: Click the 'Filter' button to refine the search</p>
+     <div class="div1g">
+     	<table class="table1">
+     		<tr>
+     			<td> Attestation Form:</td>
+     			<td>
+     				<select>
+     	                <option>-All-</option>
+                    </select>
+     			</td>
+     		</tr>
+     		<tr>
+     			<td> Panel Patient:</td>
+     			<td>
+     				<select>
+     	                <option>  -All-  </option>
+                    </select>
+     			</td>
+     		</tr>
+     	</table>
+     </div>
+     <br>
+    <h2> Attestation List</h2>
+    <p> Note: Click 'Attestation From'cell to view form details</p>
+    <table class="table2">
+    	<tr>
+    		<th>Detail</th>
+    		<th>Attestation Form</th>
+    		<th>For Provider</th>
+    		<th>Is Rendering Provider</th>
+    		<th>Patient</th>
+    		<th>Encounter Date</th>
+    		<th>Attested By</th>
+    		<th>Date Created</th>
+    	</tr>
+    	<tr>
+    		<td><img src="../images for class/i-icon2-info.png"></td>
+    		<td>15. PNEUMOVAX</td>
+    		<td>Barrie Johnathon</td>
+    		<td>No</td>
+    		<td>Patient 8, Male</td>
+    		<td>10/24/2013</td>
+    		<td>Admin, System[System Admin]</td>
+    		<td>2013-11-04 00:54:22 CST</td>
+    	</tr>
+    	<tr>
+    		<td><img src="../images for class/i-icon2-info.png"></td>
+    		<td>17. TOBACCO SCREENING (TOBACCO NON USER)</td>
+    		<td>Barrie Johnathon</td>
+    		<td>No</td>
+    		<td>Patient 15, Male</td>
+    		<td>06/01/2013</td>
+    		<td>Admin, System[System Admin]</td>
+    		<td>2013-06-28 22:12:29 CDT</td>
+    	</tr>
+    	<tr>
+    		<td><img src="../images for class/i-icon2-info.png"></td>
+    		<td>16. WEIGHT SCREENING (ABNORMAL BMI AND FOLLOW-UP)</td>
+    		<td>Barrie Johnathon</td>
+    		<td>Yes</td>
+    		<td>Patient 15, Male</td>
+    		<td>06/26/2013</td>
+    		<td>Admin, System[System Admin]</td>
+    		<td>2013-06-28 04:18:08 CDT</td>
+    	</tr>
+    	<tr>
+    		<td><img src="../images for class/i-icon2-info.png"></td>
+    		<td>14. INFLUENZA IMMUNIZATION</td>
+    		<td>Barrie Johnathon</td>
+    		<td>Yes</td>
+    		<td>Patient 14, Female</td>
+    		<td>06/19/2013</td>
+    		<td>Admin, System[System Admin]</td>
+    		<td>2013-06-28 04:14:52 CDT</td>
+    	</tr>
+    	<tr>
+    		<td><img src="../images for class/i-icon2-info.png"></td>
+    		<td>14. INFLUENZA IMMUNIZATION</td>
+    		<td>McCallister, Joseph</td>
+    		<td>Yes</td>
+    		<td>Patient 42, Male</td>
+    		<td>06/25/2013</td>
+    		<td>Admin, System[System Admin]</td>
+    		<td>2013-06-26 15:34:39 CDT</td>
+    	</tr>
+    </table>
+     </div>
+	</div>
+</body>
+</html>
