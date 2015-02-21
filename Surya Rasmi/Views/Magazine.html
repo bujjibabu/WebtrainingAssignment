@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Magazine Administration Board</title>
+		<link rel="stylesheet" type="text/css" 
+		href="../CSS/bootstrap.min.css">
+		<style type="text/css">
+			.div1{
+				color: white;
+				background-color: #911307;
+				height: 100px;
+				padding-top: 10px;
+				padding-left: 45px;
+				font-family: Century Gothic;
+			}
+			/*.ul1{
+				height: 200px;
+				width: 100px;
+			}*/
+			.ul1:first-child li{
+				list-style-type: none;
+				display: inline;
+				border-radius: 3px;
+				background: #f8b500;
+				margin-right: 3px;
+				height: 34px;
+				padding-top: 6px;
+			}
+			.div2{
+				padding: 20px;
+				/*background-color: #f5c680;*/
+				background-color: #ffeab5;
+			}
+			.table1{
+				border: 1px solid #edf8ff;
+				margin-top: 50px;
+				background-color: white;
+
+
+			}
+			.tr1{
+				background-color: #911307;
+				color: white;
+			}
+			.div3{
+				float: left;
+				padding-left: 30px;
+			}
+			.div4{
+				border: 1px solid #edf8ff;
+				margin-top: 70px;
+				padding-bottom: 6px;
+				padding-left: 10px;
+			}
+			.tr2{
+				padding-left: 20px;
+			}
+			.p1{
+				padding-left: 20px;
+				margin: 5px;
+				width: 150px;
+			}
+			.select1{
+				width: 300px;
+			}
+			.td1{
+				width: 300px;
+			}
+			.footer1{
+				background-color: #911307;
+				height: 30px; 
+				color: white;
+				padding-top: 5px;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+			
+			<div class="div1">
+				<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Magazine Administration Board
+				</h3>
+				<div>
+					<ul class="ul1">
+						<li class="col-sm-1 text-center"><a href="_blank" target=" ">Dashboard</a></li>
+						<li class="col-sm-1 text-center"><a href="_blank" target=" ">Category</a></li>
+						<li class="col-sm-2 text-center" target=" "><a href="_blank">User Management</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container-fluid div2">
+				<span class="col-sm-12"><a href="#Dashboard" target=" ">Dashboard</a>
+					&nbsp;>&nbsp; Current Articles
+				</span> 
+				<div class="col-sm-12 container">
+					
+					<div class="div3 col-sm-8">
+				<table class="table table-responsive table1">
+					<tr class="tr1">
+							<td>Current News</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					<tr>
+							<td><input type="checkbox"/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Title</b></td>
+							<td><b>Date</b></td>
+							<td><b>Added by</b></td>
+							<td><b>Content Control</b> </td>
+					</tr>
+					<tr>
+							<td><input type="checkbox"/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is just demo news</td>
+							<td>19/06/2012</td>
+							<td><a href="_blank" target=" "><u>thangchung</u></a></td>
+							<td>Delete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Edit </td>
+					</tr>
+					<tr>
+							<td><input type="checkbox"/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Article title</td>
+							<td>19/06/2012</td>
+							<td><a href="_blank" target=" "><u>thangchung</u></a></td>
+							<td>Delete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Edit </td>
+					</tr>
+					<tr>
+							<td><input type="checkbox"/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Second Article title</td>
+							<td>19/06/2012</td>
+							<td><a href="_blank" target=" "><u>thangchung</u></a></td>
+							<td>Delete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Edit </td>
+					</tr>
+					<tr>
+							<td><input type="checkbox"/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sample article</td>
+							<td>19/06/2012</td>
+							<td><a href="_blank" target=" "><u>thangchung</u></a></td>
+							<td>Delete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Edit </td>
+					</tr>
+					<tr>
+						<td><footer>Showing 1-4 of 4</footer></td>
+						<td></td>
+						<td></td>
+						<td>
+							<input type="button" value="Previous"/>
+							<input type="button" value="1"/>
+							<input type="button" value="Next"/>
+						</td>	
+					</tr>
+
+				</table>
+			</div>
+				<div class="col-sm-4">
+						<table class="table table-responsive table1">
+							<tr class="tr1"><td>Management<td>
+								
+							</tr>
+
+							<tr class="tr2">
+								<td>
+									<input type="button" value="Add new Article"/>
+									<p><br/></p>
+									&nbsp;&nbsp;&nbsp;
+									<input type="checkbox"/>&nbsp;&nbsp;&nbsp;&nbsp; <a href="_blank"><u>Select all</u></a><p><br/></p>
+									<a href="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Delete Selected</u></a>
+								<hr/>
+									<p class="p1"><b>Sort by</b><br/>
+								
+								<select class="select1">
+									<option> Title</option></select>
+								<br/>
+								<select class="select1">
+									<option>Date</option></select>
+								<br/>
+								<select class="select1">
+									<option>Author</option></p></select>
+								</td>
+								<td></td>
+							</tr>		
+						</table>
+			</div>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<footer class="container-fluid footer1">
+				<span class="col-sm-1"></span>
+				<span class="col-sm-4">&copy; 2012 - Context is King</span>
+				<span class="col-sm-3"></span>
+				<span class="col-sm-4">Design by <u>Chocotemplates.com</u></span>
+			</footer>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+			<p class="clearfix"></p>
+		</div>
+
+	</body>
+</html>
