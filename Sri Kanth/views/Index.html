@@ -6,12 +6,12 @@
 <style type="text/css">
 	.headimgcls{
 		background-image: url("../Images/Pro.png");
-		height: 140px;
+		height: 128px;
 
 	}
 	.headercls{
 		background-color: rgb(0, 46, 74);
-		height: 100px;
+		height: 88px;
 		padding-top: 0px;	
 		background-repeat: no-repeat;
 
@@ -36,8 +36,8 @@
 	}
 	
 	.select1cls{
-		background-color: rgb(147, 0, 0)!important;
-		color: #77A0D5 !important;
+background-color: rgb(0, 93, 121)!important;
+color: rgb(121, 216, 244)!important;
 	}
 	.select2cls{
 		background-color: rgb(197, 105, 0)!important;
@@ -73,10 +73,32 @@
 		color: rgba(255, 255, 255, 0.71);
 	}
 
+	.navleftclicked2{
+		text-decoration: none;
+		background-color: rgba(197, 105, 0, 0.85)!important;
+		color: rgba(255, 255, 255, 0.73) !important;
+				padding: 100px 24px !important;
+
+	}
+
+	.navleftclicked1{
+		text-decoration: none;
+background-color: rgb(0, 123, 160)!important;
+		color: rgba(255, 255, 255, 0.73) !important ;
+		padding: 100px 24px !important;
+	}
+
+	.navleftclicked3{
+		text-decoration: none;
+		background-color:  rgba(44, 139, 78, 0.83)!important;
+		color: rgba(255, 255, 255, 0.73)!important;
+				padding: 100px 24px !important;
+	}
+
 	.navleftclass>li>.select1cls:hover {
 		text-decoration: none;
-		background-color: #A13F3F !important;
-		color: rgba(255, 255, 255, 0.73) !important ;
+background-color: rgb(0, 123, 160)!important;
+color: rgba(255, 255, 255, 1) !important;
 	}
 	.navleftclass>li>.select2cls:hover {
 		text-decoration: none;
@@ -107,11 +129,11 @@
 	.framecls{
 		padding-right: 0px;
 		border: 0px;
-		height: 526px;		
+		height: 576px;		
 		background: url("../Images/power-3.jpg");
 		background-repeat: no-repeat;
 		 background-position: bottom right , right;
-		background-size: 853px 526px;
+		background-size: 853px 576px;
  		padding-left: 0px;
 	
 	}
@@ -149,5 +171,26 @@
 	<div class="container-fluid col-sm-12 bottomcls ">
 		<p class="text-center ">&copy;2015. All Rights Reserved.</p>
 	</div>
+<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.select1cls').click(function(){
+			$(' .select2cls').removeClass('navleftclicked2');
+			$(' .select3cls').removeClass('navleftclicked3');
+			 $(this).addClass('navleftclicked1');
+		});	
+		$('.select2cls ').click(function(){
+		 	$(' .select1cls').removeClass('navleftclicked1');
+			$(' .select3cls').removeClass('navleftclicked3');
+		 	 $(this).addClass('navleftclicked2'); 			 	
+		});	
+		$('.select3cls').click(function(){
+			 $('.select1cls').removeClass('navleftclicked1');
+			 $('.select2cls').removeClass('navleftclicked2');
+			$(this).addClass('navleftclicked3');
+		});	
+	});
+
+</script>
 </body >
 </html>
