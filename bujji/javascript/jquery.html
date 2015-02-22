@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<title>js</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+<style type="text/css">
+	.myclass{
+		color:white;
+		padding: 10px;
+		width:200px;
+		background: black;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<input type="text" id="firstnameid" value="bujjibabu" placeholder="firstname"/>
+			<input type="text" id="lastnameid" placeholder="lastname" />
+			<input type="text" id="addressid" placeholder="address"/>
+			<input type="text" id="phone" placeholder="mobile" />
+			<p id="pid"></p>
+			<input type="button" value="register" />
+			<ul class="ulclass">
+				<li>li1</li>
+				<li>li2</li>
+				<li>li3</li>
+				<li>li4</li>
+				<li>li5</li>
+				<li>li6</li>
+			</ul>
+		</form>
+		<p>this is my paragraph</p>
+		<button id="parahide">hide</button>
+		<button class="parashow">show</button>
+		<table class="table">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+		</table>
+	</div>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+/*function test(){
+		alert('x');
+	}*/
+// var testingfun = function(){
+// 		$('p').hide();
+// 	}
+
+$(document).ready(function(){
+	
+	$('#parahide').click(function(){
+		$('p').hide(3000,function(){window.location = "http://getbootstrap.com/"});
+	});
+	$('.ulclass li').click(function(){
+		//$('li:first').css({color:'red',background:'green'});
+		$('li').removeClass('myclass');
+		$(this).addClass('myclass');
+	});
+	$('.ulclass li').click(function(){
+		//$(':button').css({color:'red',background:'green'});
+	});
+	$('.parashow').click(function(){
+		//$('p').html('<b>this is updated paragraph with bold</b>');
+		$('p').text('<b>this is updated paragraph with bold</b>');
+
+		//$('table').toggle();
+		//$('tr:odd').css({color:'white',background:'black'});
+	});
+
+//document.getElementById('firstnameid').style.display = 'none';
+	/*console.log($('p').text());
+	console.log($('#firstnameid').val()); //jquery
+	console.log(document.getElementById('firstnameid').value); //javascript*/
+});
+</script>
+</body>
+</html>

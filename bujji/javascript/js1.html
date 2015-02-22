@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<title>js</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<form>
+		<input type="text" id="firstnameid"  placeholder="firstname"/>
+		<input type="text" id="lastnameid" placeholder="lastname" />
+		<input type="text" id="addressid" placeholder="address"/>
+		<input type="text" id="phone" placeholder="mobile" />
+		<p id="pid"></p>
+		<input type="button" value="register" onclick='fnRegister()'/>
+	</form>
+</div>
+<script type="text/javascript">
+/*	var userdetalsobject = {
+		firstname : 'bujji',
+		lastname : 'babu',
+		address : 'a.p',
+		phone:9533068603
+	}
+
+document.getElementById('firstnameid').value = userdetalsobject.firstname;
+document.getElementById('lastnameid').value = userdetalsobject.lastname;
+document.getElementById('addressid').value = userdetalsobject.address;
+document.getElementById('phone').value = userdetalsobject.phone;*/
+
+document.getElementById('pid').innerHTML = 'my para';
+function fnRegister(){
+	var ufirstname = document.getElementById('firstnameid').value;
+	var ulastname = document.getElementById('lastnameid').value;
+	var uaddress = document.getElementById('addressid').value;
+	var uphone = document.getElementById('phone').value;
+	var updatedobj ={
+		firstname : ufirstname,
+		lastname  : ulastname,
+		address : uaddress,
+		phone : uphone
+	}
+
+var updatedobj1 ={
+		firstname : 'bujji',
+		lastname  : 'babu',
+		address : 'x',
+		phone : '9533068603'
+	}
+var updatedobj2 ={
+		firstname : 'bujji1',
+		lastname  : 'babu1',
+		address : 'x1',
+		phone : '95330686031'
+	}
+var updatedobj3 ={
+		firstname : 'bujji2',
+		lastname  : 'babu2',
+		address : [{key1:'number',key2:'test'},{key1:'number1',key2:'test2'}],
+		phone : '95330686032'
+}
+	1//var myarray = ['bujji','srikanth','anila','nitesh'];
+	var myarray = [updatedobj1,updatedobj2,updatedobj3];
+
+//alert(myarray.length)
+console.log(myarray[0]);
+console.log(myarray[1]);
+console.log(myarray[2]);
+console.log(myarray[2].address[0].key1);
+console.log(myarray);
+
+
+
+	//console.log(updatedobj);
+};
+
+
+//alert(userdetalsobject.firstname);
+//alert(userdetalsobject['lastname']);
+var x = 1+3+'hello';
+var y = 'hello' +1+3; //hello13
+var z = 1+3+'hello'+1+3;//4hello13
+
+//alert(x);
+//alert(y);
+//alert(z);
+
+var date = new Date();
+
+//alert(date);
+
+
+</script>
+</body>
+</html>
