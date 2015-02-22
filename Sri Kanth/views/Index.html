@@ -4,25 +4,35 @@
 <title>UI Assignments</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 <style type="text/css">
+	.headimgcls{
+		background-image: url("../Images/Pro.png");
+		height: 140px;
+
+	}
 	.headercls{
 		background-color: rgb(0, 46, 74);
-		height: 140px;
-		padding-top: 30px;	
-		background-image: url("../Images/Pro.png");
+		height: 100px;
+		padding-top: 0px;	
 		background-repeat: no-repeat;
 
 	}
+
 	.titlecls{
 		color: rgba(255, 255, 255, 0.45);
 		font-family: microsoft yi baiti;
 		font-size: 52px;
-		padding-right: 160px;
 
 	}
+		
 	.titlecls:hover, .headercls:hover{
 		text-decoration: none;
 		color: #fff;
-		background-color: rgb(23, 50, 58);
+/*		background-color: rgb(23, 50, 58);
+*/	}
+
+	.navseccls{
+		background-color: rgb(0, 46, 74);
+
 	}
 	.select1cls{
 		background-color: rgb(147, 0, 0)!important;
@@ -36,13 +46,13 @@
 		background-color: rgb(44, 139, 78)!important;
 		color: #A4D5FF !important;
 	}
-	.nav-pills>li>a {
+	.nav>li>a {
 		border-radius: 0px;
 	}
-	.nav {
+	.navleftclass {
 		margin-left: -15px;
 	}
-	.nav>li>a {
+	.navleftclass>li>a {
 		position: relative;
 		display: block;
 		padding: 73.5px 24px;
@@ -52,17 +62,23 @@
 		margin-bottom: -2px;
 
 	}
-	.nav>li>.select1cls:hover {
+	.navcls>li>a:hover {
+		text-decoration: none;
+		background-color: rgb(0, 46, 74);
+		color: rgba(255, 255, 255, 0.71);
+	}
+
+	.navleftclass>li>.select1cls:hover {
 		text-decoration: none;
 		background-color: #A13F3F !important;
 		color: rgba(255, 255, 255, 0.73) !important ;
 	}
-	.nav>li>.select2cls:hover {
+	.navleftclass>li>.select2cls:hover {
 		text-decoration: none;
 		background-color: rgba(197, 105, 0, 0.85)!important;
 		color: rgba(255, 255, 255, 0.73) !important;
 	}
-	.nav>li>.select3cls:hover {
+	.navleftclass>li>.select3cls:hover {
 		text-decoration: none;
 		background-color:  rgba(44, 139, 78, 0.83)!important;
 		color: rgba(255, 255, 255, 0.73)!important;
@@ -103,11 +119,19 @@
 </style>
 </head>
 <body >
-	<div class="container-fluid headercls">
-		<p class="  text-right"><a href="../views/Index.html " class="titlecls text-uppercase">UI Assignments</a></p>
+	<div class=" col-sm-6 headimgcls">
+	</div>
+	<div class=" col-sm-6 navseccls text-right">
+		<ul class="nav nav-pills navcls ">
+		  <li role="presentation" class="text-right"><a href="../views/Login.html"target="contentcls" >Login</a></li>
+		  <li role="presentation"><a href="../views/SignUp.html"target="contentcls">Sign Up</a></li>
+		</ul>
+	</div>
+	<div class=" col-sm-6 headercls">
+		<p class="  text-center"><a href="../views/Index.html " class="titlecls text-uppercase">UI Assignments</a></p>
 	</div>
 	<div  class="col-sm-4 leftcls">
-		<ul class="nav nav-pills nav-stacked">
+		<ul class="nav nav-pills nav-stacked navleftclass">
 		  <li role="presentation" class=""><a href="../views/HCB.html" class="select1cls  text-center" target="contentcls" >HTML, CSS & Bootstrap </a></li>
 		  <li role="presentation"><a href="../views/JavaScript_home.html" class="select2cls  text-center "target="contentcls">JavaScript</a></li>
 		  <li role="presentation"><a href="../views/Angular_JS_home.html" class="select3cls  text-center" target="contentcls">Angular JS</a></li>
@@ -120,4 +144,5 @@
 	<div class="container-fluid col-sm-12 bottomcls ">
 		<p class="text-center ">&copy;2015. All Rights Reserved.</p>
 	</div>
+</body >
 </html>
