@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Mobile</th>
+				<th>Zip</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="name"></td>
+				<td id="address"></td>
+				<td id="mobile"></td>
+				<td id="zip"></td>
+			</tr>
+			<tr>
+				<td id="name1"></td>
+				<td id="address1"></td>
+				<td id="mobile1"></td>
+				<td id="zip1"></td>
+			</tr>	
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	var myobject = {
+		"name" : "bujjibabu",
+		"address":"hyderabad",
+		"phone":9533068603,
+		"zip" :532459
+	}
+
+	var myobject2 = {
+		"name" : "prakesh",
+		"address":"hyderabad",
+		"phone":9494590972,
+		"zip" :532439
+	}
+
+	document.getElementById('name').innerHTML = myobject.name;
+	document.getElementById('address').innerHTML = myobject.address;
+	document.getElementById('mobile').innerHTML = myobject.phone;
+	document.getElementById('zip').innerHTML = myobject.zip;
+
+	document.getElementById('name1').innerHTML = myobject2.name;
+	document.getElementById('address1').innerHTML = myobject2.address;
+	document.getElementById('mobile1').innerHTML = myobject2.phone;
+	document.getElementById('zip1').innerHTML = myobject2.zip;
+
+	
+var myobject3 = {
+		"name" : "prakesh123",
+		"address":"hyderaba33d",
+		"phone":94945909724,
+		"zip" :532439345
+	}
+
+var myobject4 = {
+		"name" : "srikanth",
+		"address":"vizag",
+		"phone":123456897,
+		"zip" :12345
+	}
+
+	//console.log(myobject);
+	//document.getElementById('myobj').innerHTML = myobject.name;
+	//myobject.email = 'bujji404@gmail.com';
+	//myobject['state'] = 'A.P';
+
+	//console.log(myobject);
+	//var myArray = [5,1,2,3,4];
+	//console.log(myArray);
+	//console.log(myArray[0]);
+
+	//var myArray2 = ['bujji','A.P','9533068603','hyd'];
+	//console.log(myArray2);
+	//console.log(myArray2[0]);
+
+	//myArray2.push('bujjibabu');
+	//console.log(myArray2);
+
+
+	// var myArray3 = [myobject,myobject2,myobject3]
+	// console.log(myArray3);
+	// myArray3.push(myobject4);
+	// console.log(myArray3);
+
+
+	var d = new Date();
+	d.setDate(1);
+	d.getMonth()
+	console.log(d);
+
+	//d.setMonth(d.getMonth() - 1);
+	//return d;
+	
+</script>
+</body>
+</html>

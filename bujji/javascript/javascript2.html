@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<p><span id="fname" class="text-success"></span> <span id="laname" class="text-danger"></span></p>
+</div>
+<script type="text/javascript">
+	//var myObject = {};
+	//var myArray = [];
+	var myObject = {
+		firstname : 'bujji',
+		lastname :  'babu',
+		email : 'bujji4043@gmail.com',
+		mobile : 9533068603,
+		area : 'hyderabad'
+	}
+	//0,1,2
+	//var myArray = ['bujji','babu','9533068603'];
+	
+	var myarray2 = [{
+		firstname : 'bujji',
+		lastname :  'babu',
+		email : 'bujji4043@gmail.com',
+		mobile : 9533068603,
+		'area' : 'hyderabad'
+	},{
+		firstname : 'testname',
+		lastname :  'babu',
+		email : 'bujji4043@gmail.com',
+		mobile : 9533068603,
+		'area' : 'hyderabad'
+	}]
+	alert(myarray2[0].firstname)
+
+	//alert(myArray.length);
+	//alert(myArray[0]);
+
+//var myArray = [{},{},{}]
+/*var myObject2 = {
+		firstname : 'nitesh',
+		lastname :  'babu',
+		email : 'bujji4044@gmail.com',
+		mobile : 9533068603,
+		'area' : 'hyderabad'
+	}*/
+
+	var myfirstnmaevalue = myObject.firstname;
+	var myfirstname = myObject['firstname'];
+
+	var mylastname = myObject.lastname;
+	document.getElementById('fname').innerHTML = myfirstname;
+	document.getElementById('laname').innerHTML = mylastname;
+	//console.log(myObject['firstname']);
+	//alert(myfirstnmaevalue + mylastname);
+	//alert(myfirstnmaevalue +' '+ mylastname);
+	//alert();
+	console.log(myObject.area);
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html ng-app="">
+<head>
+<title>js</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body ng-controller="myfirstctrl">
+<!-- 	<div class="container">
+		<div>{{1+2}}</div>
+		<div>{{2+3}}</div>
+		<input type="text" placeholder="EnterName" ng-model="name"/>
+		<h1>{{name}}</h1>
+		<h1 ng-bind="name"></h1>
+
+		<form class="col-sm-3">
+			
+			<div class="form-group">
+				<label class="sr-only">firstname</label>
+				<input type="text" class="form-control" placeholder="first name" ng-model="fname">
+			</div>
+			<div class="form-group">
+				<label class="sr-only">lastname</label>
+				<input type="text" class="form-control" placeholder="last name" ng-model="laname">
+			</div>
+			<div class="form-group">
+				<label class="sr-only">email</label>
+				<input type="text" class="form-control" placeholder="email" ng-model="email">
+			</div>
+			<div class="form-group">
+				<label class="sr-only">phone</label>
+				<input type="text" class="form-control" placeholder="phone" ng-model="phone">
+			</div>
+			<div class="btn btn-primary" ng-click="fnRegister()">Register</div>
+		</form> -->
+
+		<!-- <div class="btn btn-success" ng-click="myFirstAngularFunction()">click here</div> -->
+		<table class="table">
+			<tr>
+				<th>First Name</th>
+				<th>last Name</th>
+				<th>Mobile NO</th>
+				<th>Email</td>
+			</tr>
+			<tr ng-repeat = "x in displaydata">
+				<th>{{x.firstnmae}}</th>
+				<th>{{x.lastname}}</th>
+				<th>{{x.emailaddress}}</th>
+				<th>{{x.mobile}}</td>
+			</tr>
+		</table>
+	</div>
+<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js"></script>
+<script type="text/javascript">
+	function myfirstctrl($scope){
+
+	$scope.displaydata = [{
+			firstnmae : 'bujji',
+			lastname : 'b',
+			emailaddress : 'bujji404@gmail.com',
+			mobile :9533068603
+		},
+		{
+			firstnmae : 'srikanth',
+			lastname : 's',
+			emailaddress : 'bujjierf@gmail.com',
+			mobile :953306860333
+		},
+		{
+			firstnmae : 'anila',
+			lastname : 'z',
+			emailaddress : 'bujjiabc@gmail.com',
+			mobile :953306860323
+		},
+		{
+			firstnmae : 'anila',
+			lastname : 'z',
+			emailaddress : 'bujjiabc@gmail.com',
+			mobile :953306860323
+		},
+		{
+			firstnmae : 'anila',
+			lastname : 'z',
+			emailaddress : 'bujjiabc@gmail.com',
+			mobile :953306860323
+		}];
+
+/*		var scope = $scope;
+		scope.name='This is my model name';
+		scope.myFirstAngularFunction = function(){
+			console.log(scope.name);
+		};
+		scope.fnRegister = function(){
+		scope.registerObj = {
+			firstnmae : scope.fname,
+			lastname : scope.laname,
+			emailaddress : scope.email,
+			mobile :scope.phone
+		}
+		console.log(scope.registerObj);	*/
+
+/*		$.ajax({
+		  type: "POST",
+		  url: "http:google/service/register",
+		  data: scope.registerObj
+		}).done(function( receiveddata ) {
+		    alert( "Data Saved successfull " );
+		  }).fail(function(receiveddata){
+		    alert( "getting error" );
+		});
+
+		$.ajax({
+			  type: "GET",
+			  url: "http:google/service/signindata"
+			}).done(function( data ) {
+				$scope.displaydata = data;
+			    alert( "Data Saved successfull " );
+			  }).fail(function(msg){
+			    alert( "getting error" );
+			});*/
+
+
+
+		//}
+	};
+
+</script>
+</body>
+</html>

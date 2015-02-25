@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Mobile</th>
+				<th>Zip</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="name"></td>
+				<td id="address"></td>
+				<td id="mobile"></td>
+				<td id="zip"></td>
+			</tr>	
+		</tbody>
+	</table>
+	<p id="mypara0"></p>
+	<p id="mypara1"></p>
+	<p id="mypara2"></p>
+</div>
+
+<script type="text/javascript">
+console.log('hello'+1);
+/*var object = {
+	para1 : 'This is my first paragraph',
+	para2 : 'This is mysecond paragraph',
+	para3 : 'This is third paragraph',
+}*/
+
+var myParaArray= ['This is my first paragraph','This is mysecond paragraph','This is third paragraph',]
+for (var i = 0; i < 3; i++) {
+	if(i==2){
+	document.getElementById('mypara'+i).innerHTML = myParaArray[i];
+	}
+}
+var obj1 ={doorno:23,village:'hiramandalam'};
+var obj2 ={doorno:24,village:'kakinada'};
+
+
+	var myobject = {
+		"name" : "bujjibabu",
+		"address":[obj1,obj2],
+		"phone":['09','67','7890'],
+		"married" :true,
+		mobile:9533068603,
+		test : null
+
+	}
+
+console.log(myobject.address[0].village);
+
+	var myobject2 = {
+		"name" : "prakesh",
+		"address":"hyderabad",
+		"phone":9494590972,
+		"zip" :532439
+	}
+
+/*	document.getElementById('name').innerHTML = myobject.name;
+	document.getElementById('address').innerHTML = myobject.address;
+	document.getElementById('mobile').innerHTML = myobject.phone;
+	document.getElementById('zip').innerHTML = myobject.zip;
+
+	document.getElementById('name1').innerHTML = myobject2.name;
+	document.getElementById('address1').innerHTML = myobject2.address;
+	document.getElementById('mobile1').innerHTML = myobject2.phone;
+	document.getElementById('zip1').innerHTML = myobject2.zip;*/
+
+	
+var myobject3 = {
+		"name" : "prakesh123",
+		"address":"hyderaba33d",
+		"phone":94945909724,
+		"zip" :532439345
+	}
+
+var myobject4 = {
+		"name" : "srikanth",
+		"address":"vizag",
+		"phone":123456897,
+		"zip" :12345
+	}
+
+ var myAaary =[myobject,myobject2,myobject3,myobject4]
+
+	document.getElementById('name').innerHTML = myAaary[0].name;
+	document.getElementById('address').innerHTML = myAaary[0].address;
+	document.getElementById('mobile').innerHTML = myAaary[0].phone;
+	document.getElementById('zip').innerHTML = myAaary[0].zip;
+
+
+
+</script>
+</body>
+</html>
