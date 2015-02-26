@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container">
+<table class="table table-bordered" id="tableid">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Mobile</th>
+				<th>Zip</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="name">12</td>
+				<td id="address">22</td>
+				<td id="mobile">22</td>
+				<td id="zip">34</td>
+			</tr>
+			<tr>
+				<td id="name1">56</td>
+				<td id="address1">56</td>
+				<td id="mobile1">34567</td>
+				<td id="zip1">46</td>
+			</tr>	
+		</tbody>
+	</table>
+	<div class="btn btn-success text-center" onclick="fnPrint();" id="print">Print</div>
+	<div class="btn btn-primary" onclick="fnHideTable();">click here to hide the table </div>
+	<div class="btn btn-primary" onclick="fnChangeStyle();">click here to change  the table style </div>
+	<div class="btn btn-primary" onclick="fnShowTable();anotherFnuction();">click here to Show  the table </div>
+	<div onclick="fnFunction1();" class="btn btn-warning">function1</div>
+	<div onmouseover="fnFunction2();" class="btn btn-danger">function2</div>
+</div>
+
+<script type="text/javascript"> 
+	function fnPrint(){
+		//alert('testing');
+		document.getElementById('print').style.display='none';
+		window.print();		
+	}
+	function fnHideTable(){
+		document.getElementById('tableid').style.display='none';
+	}
+	function fnChangeStyle(){
+		document.getElementById('tableid').style.color='white';
+		document.getElementById('tableid').style.background='black';
+	}
+	function fnShowTable(){
+		document.getElementById('tableid').style.display='block';
+	}
+	var  y =20; //global variable
+	function fnFunction1(){
+		x = 10;   // local var scope
+		alert(x);
+		//alert(y);
+	}
+	function fnFunction2(){
+		//alert(y);
+		//alert(x);
+		alert('onmouseover event fire');
+	}
+	function anotherFnuction(){
+		document.getElementById("tableid").style.fontSize='30px';
+	}
+	//strings
+
+	var myStringObj = 'this is my bujjibabu';
+	//alert(myStringObj.length);
+	var charat1 = myStringObj.charAt(4);
+	var charat = myStringObj.charCodeAt(0);
+	var string1 = "bujji";
+	var string2 = " babu";
+	//var string3 = string1+" "+string2;
+	var string3 = string1.concat(" "+string2);
+	var arry1 = [1,2,4,7];
+	var array2 =[5,6];
+	var array3 = arry1+array2;
+	var string3 = ("this is my second name"+ " ").concat(" "+string2);
+	//console.log(string3);
+	//console.log(array3.length);
+	var mystring = "please find where find occures";
+debugger;
+var indexof = mystring.indexOf('find');
+var lastindexof = mystring.lastIndexOf('find');
+var search = mystring.search('find');
+	//alert(search);
+	debugger;
+	var myArray = "bujji babu mohan raja";
+	myArray.substring(6,23);
+	alert(myArray);
+</script>
+</body>
+</html>
