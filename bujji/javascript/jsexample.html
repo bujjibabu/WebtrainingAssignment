@@ -31,6 +31,7 @@
 	//alert(myArray.length);
 
 	var myArray1 =['govardhan','bujji','chandu','anila','madhu'];
+	//chandu chari
 	var sortingarray = myArray1.sort();
    		//myArray1.push('srikanth');
    		//myArray1.unshift('srikanth');
@@ -63,11 +64,11 @@
 	var dom = document.getElementById('name');
 	for(var i=0; i<l; i++ ){
 		textname += myArray[i].name;
-		dom.innerHTML= textname + '<br>';
+		dom.innerHTML= textname;
 	}
-var myText = 'this is bujji and bujji doing job';
-//myText.search('bujji');
-//myText.search(/bujji/i);
+var myText = 'this is Bujji and Bujji doing job';
+myText.search('bujji');
+myText.search(/bujji/i);
 //console.log(myText.search(/bujji/i));
 //console.log(myText.search('bujji'));
 console.log('original'+" "+myText);
@@ -75,7 +76,7 @@ console.log('replaing'+" "+ myText.replace(/bujji/g,'mohan'));
 //console.log('after replacing'+" "+ myText);
 //console.log(myText.replace('bujji','mohan'));
 //console.log('after replacing again'+" "+ myText);
-var mystring = 'this is\
+var mystring = 'this is \
 bujji';
 console.log(mystring);
 </script>
