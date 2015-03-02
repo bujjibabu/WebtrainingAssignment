@@ -27,17 +27,17 @@
 	<div ></div>
 	<div class="container subbodycls1">
 		<div class="col-sm-offset-2 col-sm-8 subbodycls2">
-			<form class="form-horizontal">
+			<form class="form-horizontal" >
 			  <div class="form-group">
 			    <label class="col-sm-2 control-label">Email: </label>
 			    <div class="col-sm-10 ">
-			      <input type="email" class="form-control  emailClass" id="emailId" placeholder="email@example.com ">
+			      <input type="email" class="form-control  emailClass" Required=" d" id="emailId" placeholder="email@example.com ">
 			  	</div>
 			  </div>
 			  <div class="form-group">
 			    <label class="col-sm-2 control-label">Password: </label>
 			    <div class="col-sm-10">
-			      <input type="password" class="form-control" placeholder="Password">
+			      <input type="password" class="form-control" Required=" " id="pwdId" placeholder="Password">
 			    </div>
 			  </div>
 			  <div class="form-group">
@@ -75,11 +75,25 @@
 			
 			var emailVal=/^\w+([\-.]?\w+)*@\w+([\-.]?\w+)*(\.\w{2,3})+$/;
 			var evar=$(' #emailId ').val();
-						 alert( evar );
-			if (!evar.match(emailVal) ) {
-				// alert( "a"); 
-				$('.emailClass').css({border:'1px solid red'}  );
-			};
+			var pvar=$(' #pwdId ').val();
+			var eadm = 'admin@ad.com';
+			var padm = 'admin';
+			
+						  // alert( evar );
+			if (evar.match(emailVal) ) {
+				if (pvar.match(adm)) {
+					window.location="http://stackoverflow.com";
+				   }
+				 // alert( "Enter valid email"); 
+				//$('.emailClass').css({border:'1px solid red'}  );
+			}
+			// else {if (evar.match(adm)) {
+			// 	// alert( "a"); 
+			// 	$('.emailClass').css({border:'1px solid red'}  );
+			// 	// window.location="http://stackoverflow.com";
+			// }};
+				
+
 		});	
 	});	
 
