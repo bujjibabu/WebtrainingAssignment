@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<!-- <table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Mobile</th>
+				<th>Zip</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="name"></td>
+				<td id="address"></td>
+				<td id="mobile"></td>
+				<td id="zip"></td>
+			</tr>	
+		</tbody>
+	</table> -->
+	<p id="name"></p>
+</div>
+<script type="text/javascript">
+	var myArray = [{name:'bujji',address:'hyderabad',mobile:9533068603,zip:532459},{name:'bujji1',address:'hyderabad1',mobile:95330686033,zip:5324593},{name:'bujji2',address:'hyderabad2',mobile:95330686032,zip:5324592},{name:'bujji3',address:'hyderabad3',mobile:95330686033,zip:5324593},{name:'bujji4',address:'hyderabad4',mobile:95330686034,zip:5324594}];
+	//alert(myArray.length);
+
+	var myArray1 =['govardhan','bujji','chandu','anila','madhu'];
+	//chandu chari
+	var sortingarray = myArray1.sort();
+   		//myArray1.push('srikanth');
+   		//myArray1.unshift('srikanth');
+   		console.log(myArray1);
+   		myArray1[myArray1.length] = 'surya';
+   		console.log('adding element:'+" "+myArray1);
+
+	//myArray1.pop();
+	//myArray1.shift()
+	delete myArray1[1];
+	console.log('delete element:'+" "+myArray1);
+
+	var myNumberArray = [1,10,100,2,4,300];
+
+	console.log("myNumberArray"+ myNumberArray);
+	myNumberArray.sort(function(a,b){return a-b});
+	console.log('mynumberArraySorting:'+ myNumberArray);
+
+	myNumberArray.sort(function(a,b){return b-a});
+	console.log('mynumberArrayReverseSorting:'+ myNumberArray);
+
+/*	1-10 = -9 // 1
+	10-100 =-90 //10
+	100-2 = 98  // 2
+	100-4 = 96 // 4*/
+		//console.log('mynumberArraySorting:'+ mynumberArraySort);
+		
+	var textname ='';
+	var l = myArray.length;
+	var dom = document.getElementById('name');
+	for(var i=0; i<l; i++ ){
+		textname += myArray[i].name;
+		dom.innerHTML= textname;
+	}
+var myText = 'this is Bujji and Bujji doing job';
+myText.search('bujji');
+myText.search(/bujji/i);
+//console.log(myText.search(/bujji/i));
+//console.log(myText.search('bujji'));
+console.log('original'+" "+myText);
+console.log('replaing'+" "+ myText.replace(/bujji/g,'mohan'));
+//console.log('after replacing'+" "+ myText);
+//console.log(myText.replace('bujji','mohan'));
+//console.log('after replacing again'+" "+ myText);
+var mystring = 'this is \
+bujji';
+console.log(mystring);
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="myul col-sm-2">
+			<li>listitem1</li>
+			<li>listitem2</li>
+			<li class="myownli" id="myli">listitem3</li>
+			<li>listitem4</li>
+			<li>listitem5</li>
+		</ul>
+
+		<ul class="myul col-sm-2">
+			<li>listitem1</li>
+			<li>listitem2</li>
+			<li class="myownli" id="myli">listitem3</li>
+			<li>listitem4</li>
+			<li>listitem5</li>
+		</ul>
+
+		<ul class="myul1 col-sm-2">
+			<li>second listitem1</li>
+			<li>second listitem2</li>
+			<li>second listitem3</li>
+			<li>second listitem4</li>
+			<li>second listitem5</li>
+		</ul>
+<table class="table table-bordered">
+<tr>
+<th>head1</th>
+<th>head2</th>
+<th>head3</th>
+</tr>
+<tr>
+<td>td1</td>
+<td>td2</td>
+<td>td2</td>
+</tr>
+<tr>
+<td>td1</td>
+<td>td2</td>
+<td>td2</td>
+</tr>
+<tr>
+<td>td1</td>
+<td>td2</td>
+<td>td2</td>
+</tr>
+<tr>
+<td>td1</td>
+<td>td2</td>
+<td>td2</td>
+</tr>
+<tr>
+<td>td1</td>
+<td>td2</td>
+<td>td2</td>
+</tr>
+</table>
+<p>this is my para graph </p>
+<p class="mypara">this is my para graph </p>
+<div class="btn btn-primary myownbtn"> change table style </div>
+<div class="btn btn-success myhide"> hide table </div>
+<div class="btn btn-success mytoggle"> hideTable </div>
+	</div>
+
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>	
+<script type="text/javascript">
+$(document).ready(function(){
+
+/*$('.myownli').click(function(){
+  alert('clicked in the 3rd li:');
+});
+*/
+$('ul li:first').click(function(){
+ $('p').css({'color':'blue'});
+
+ // document.getElementById('myli').style.color='white';
+ // document.getElementById('myli').style.backgrond='black';
+ // document.getElementById('myli').style.fontSize='20px';
+
+});
+
+$('ul li:first-child').click(function(){
+ $('.mypara').css({'color':'red'});
+});
+
+$('.myownbtn').dblclick(function(){
+	$('tr:odd').css({'background':'red'})
+});
+
+$('.myownbtn').mouseenter(function(){
+	$('tr:odd').css({'background':'red'})
+});
+
+//$(selector).on('click', function(){});
+// hide(speed, callback)
+})
+$('.myhide').click(function(){
+	$('table').hide(2000,myfun);
+});
+
+$('.mytoggle').click(function(){
+	$('table').toggle(1000,myfun1);
+});
+
+var myfun = function(){alert('my table hidden')}
+var myfun1 = function(){
+	$('.mytoggle').html('showTable');
+}
+
+//function myfun(){alert('my table hidden')}
+
+</script>
+</body>
+</html>
