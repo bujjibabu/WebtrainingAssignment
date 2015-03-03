@@ -2,99 +2,105 @@
 <html>
 <head>
 <title>My jQuery</title>
-<link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../js from Bootstap/bootstrap.min.js">
-
+	<link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
 </head>
 <body>
 	<div class="container">
 		<form class="form-group col-sm-offset-4 col-sm-4" id="form1">
 			<h2>My Form</h2>
-			<br>
-			<p class="clearfix">
+				<br>
+				<p class="clearfix">
 			<label>UserName</label>
-			<br>
+				<br>
 			<input class="form-control" id="email1" type="Email" placeholder="Enter Username"/>
-			<p class="clearfix">
-			<p class="clearfix">
+				<p class="clearfix">
+				<p class="clearfix">
 			<label>Password</label>
-			<br>
+				<br>
 			<input class="form-control" id="pswd1" type="password" placeholder="Password"/>
-			<p class="clearfix">
-			<br>
-			<button class="btn btn-primary" onclick="fctn1()">Login</button><br><p class="clearfix">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create Account</button>
-					<div class="modal fade">
-					  <div class="modal-dialog">
+				<p class="clearfix">
+				<br>
+			<button class="btn btn-primary" onclick="fctn1()">Login</button>
+				<br>
+				<p class="clearfix">
+			
+			<button type="button" class="btn btn-primary" data-toggle="modal" 
+			data-target="#myModal">Create Account</button>
+				<div class="modal fade">
+					 <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
 					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					        <h4 class="modal-title">Modal title</h4>
 					      </div>
 					      <div class="modal-body">
-					        <form class="form-group col-sm-offset-4 col-sm-4">
-								<h2>My Form</h2>
-								<br>
-								<p class="clearfix">
-								<label>UserName</label>
-								<br>
-								<input class="form-control" id="email1" type="Email" placeholder="Enter Username"/>
-								<p class="clearfix">
-								<p class="clearfix">
-								<label>Enter a Password</label>
-								<br>
-								<input class="form-control" id="pswd1" type="password" placeholder="Password"/>
-								<p class="clearfix">
-								<p class="clearfix">
-								<label>Re-type Password</label>
-								<br>
-								<input class="form-control" id="pswd1" type="password" placeholder="Password"/>
-								<p class="clearfix">
-								<br>
-								<input type="radiobutton">
-								<p class="clearfix">
-								<br>
-								<button class="btn btn-primary">Sign Up</button><br>
-								<p class="clearfix">
-								<button class="btn btn-primary">Cancel</button><br>
-								<p class="clearfix">
-							</form>
+						        <form class="form-group col-sm-offset-4 col-sm-4">
+									<h2>My Form</h2>
+										<br>
+										<p class="clearfix">
+									<label>UserName</label>
+										<br>
+									<input class="form-control" id="email1" type="Email" placeholder="Enter Username"/>
+										<p class="clearfix">
+										<p class="clearfix">
+									<label>Enter a Password</label>
+										<br>
+									<input class="form-control" id="pswd1" type="password" placeholder="Password"/>
+										<p class="clearfix">
+										<p class="clearfix">
+									<label>Re-type Password</label>
+										<br>
+									<input class="form-control" id="pswd1" type="password" placeholder="Password"/>
+										<p class="clearfix">
+										<br>
+									<input type="radiobutton">
+										<p class="clearfix">
+										<br>
+									<button class="btn btn-primary">Sign Up</button><br>
+										<p class="clearfix">
+									<button class="btn btn-primary">Cancel</button><br>
+										<p class="clearfix">
+								</form>
 					      </div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close
-			</button>
-			<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
-			</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close
+							</button>
+							<button type="button" class="btn btn-primary">Save changes
+							</button>
+						
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+				</div>
 			</div>
 		</form>
-	</div>
-			<script type="text/javascript" src="../JS/jquery-migrate-1.2.1.min-2.js">
-			</script>
-			<script type="text/javascript" src="../JS/jquery-1.11.2.min.js">
-				$('#myModal').on('shown.bs.modal', function () {
-				    	$('#myInput').focus()
-				  		})
-			</script>
 	
+			<!--<script type="text/javascript" src="../CSS/jquery-migrate-1.2.1.min-2.js">
+			</script>-->
+			
+			<script type="text/javascript" src="../CSS/jquery-1.11.2.min.js">	
+			</script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"> </script>
 			<script type="text/javascript">
+						// $('#myModal').on('shown.bs.modal',function () {
+				  //   	$('#myInput').focus()
+				  // 		});
 
 			function fctn1(){
-				var Email1 = document.getElementById('email1').value;
-				var  pswd1 = document.getElementById('pswd1').value;
+				var x = document.getElementById('email1').value;
+				var  y = document.getElementById('pswd1').value;
 				
-				if(!Email == '') {
+				if(!x == '') {
 				document.getElementById('email1').innerHTML = 'Enter a Valid Name';
 			}else{
 				document.getElementById('email1').innerHTML = ' ';
 			}
-			if(!password == '') {
+			if(!y == '') {
 				document.getElementById('pswd1').innerHTML = 'Enter a Valid password';
 			}else{
 				document.getElementById('pswd1').innerHTML = ' ';
 			}
 		};	
+		
 		</script>
 </body>
 </html>
