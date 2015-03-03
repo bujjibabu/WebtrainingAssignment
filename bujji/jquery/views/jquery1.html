@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON</title>
+<link rel="stylesheet" type="text/css" href="../../bootstrapsession/css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<form class="col-sm-offset-4 col-sm-4" id="form1">
+			<h1>Form</h1>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+		    <p class="text-danger" id="error-email"></p>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"required>
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox" required> Check me out
+		    </label>
+		  </div>
+		  <button type="button" class="btn btn-default" ><a href="file:///E:/trainig/uitrining/git/WebtrainingAssignment/bujji/bootstrapsession/views/bootstrap4.html">Submit</a></button>
+		</form>
+		<p class="clearfix"/>
+		<div class="col-sm-offset-6  col-sm-6">
+			<div class="btn btn-primary hide-form">Hide Form</div>
+			<div class="btn btn-primary show-form">show Form</div>
+		</div>
+		<ul class="myul col-sm-2">
+			<li>listitem1</li>
+			<li>listitem2</li>
+			<li>listitem3</li>
+			<li>listitem4</li>
+			<li>listitem5</li>
+		</ul>
+	</div>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$('.hide-form').click(function(){
+	$("#form1").hide();
+});
+$('.show-form').click(function(){
+	$("#form1").show();
+});
+
+$('.myul li').click(function(){
+	//$(this).hide();
+	$('.myul li').css({'color':'black','background':'none'});
+	$(this).css({'color':'white','background':'black'});
+	//debugger;
+});
+</script>
+</body>
+</html>

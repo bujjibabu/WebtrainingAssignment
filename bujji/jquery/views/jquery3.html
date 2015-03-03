@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<title>JQuery</title>
+<link rel="stylesheet" type="text/css" href="../../bootstrapsession/css/bootstrap.css">
+</head>
+<style type="text/css">
+	.div1{
+		height:100px;
+		width:200px;
+		background: red;
+	}
+	.animatediv{
+		border:1px solid red;
+		background:blue;
+	}
+	.chaining{
+		height:200px;
+		width:500px;
+		border: :2px solid red;
+	}
+</style>
+<body>
+	<div class="chaining"> chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining chining </div>
+	<div class="animatediv"> animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv animatediv  animatediv animatediv animatediv</div>
+	<div class="div1" id="test">this is my first div</div>
+	<div class="sliding bg-danger ">sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding sliding </div>
+	<div class="btn btn-success btn-fadein">fadeIn()</div>
+	<div class="btn btn-success btn-fadeOut">fadeOut()</div>
+	<div class="btn btn-success btn-fadeToggle">fadeToggle()</div>
+	<div class="btn btn-success btn-fadeTo">fadeTo()</div>
+	<div class="btn btn-success btn-sliding">slideUp()</div>
+	<div class="btn btn-success btn-slidingdown">slideDown()</div>
+	<div class="btn btn-success btn-slidingtoggle">slideToggle()</div>
+	<div class="btn btn-success btn-animate">animate</div>
+	<div class="btn btn-success btn-chaining">chaining</div>
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$('.btn-fadeOut').click(function(){
+			$('.div1').fadeOut(5000);
+		})
+		$('.btn-fadein').click(function(){
+			$('.div1').fadeIn(5000);
+		})
+		$('.btn-fadeToggle').click(function(){
+			$('.div1').fadeToggle(3000,function(){alert('fade Toggle')});
+		})
+
+		$('.btn-fadeTo').click(function(){
+			$('.div1').fadeTo(3000, 0.3);
+		})
+		$('.btn-sliding').click(function(){
+			$('.sliding').slideUp(3000);
+		})
+		$('.btn-slidingdown').click(function(){
+			$('.sliding').slideDown(3000);
+		})
+		$('.btn-slidingtoggle').click(function(){
+			$('.sliding').slideToggle(3000);
+		})
+		/*$('.btn-animate').click(function(){
+			$('.animatediv').animate({
+				left:'250px',
+				opacity:'0.7',
+				height:'200px',
+				width:'500px'
+			},2000);
+		})*/
+		$('.btn-animate').click(function(){
+			$('.animatediv').animate({
+				left:'250px',
+				opacity:'0.7',
+				height:'toggle',
+				width:'500px'
+			},2000);
+		})
+		$('.btn-chaining').click(function(){
+			$('.chaining').css({'color':'blue','fontSize':'12px'}).slideUp(2000).slideDown(4000)
+		})
+	</script>
+</body>
+</html>
