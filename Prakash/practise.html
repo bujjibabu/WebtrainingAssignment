@@ -4,21 +4,40 @@
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <div class="container">
   <form>
-    <input type="text"  placeholder="username"/> 
+    <input type="text"  placeholder="username" id="uname" /> 
      <pre id='demo'></pre>
-    <input type="password" placeholder="password"/><p id='demo1'></p>
+    <input type="password" placeholder="password" id="pwd"/><p id='demo1'></p>
 
-    <button onclick="func1()">submit</submit></form></div>
+    <button onclick="func1()">submit</button>
+  </form>
+</div>
   
   <script src="../jquery/jquery-1.11.2.min.js"></script>
  
    <script type="text/javascript">
    function func1(){
-   x=document.forms[0].elements[0].name;
-   y=document.forms[0].elements[1].name;
-   if(x==''){
-    document.getElementById('demo').innerHTML= "enter username";
-   }if(y==''){
+/*   x=document.forms[0].elements[0].name;
+   y=document.forms[0].elements[3].name;*/
+
+   var x = document.getElementById('uname').value;
+   var y = document.getElementById('pwd').value;
+
+   //empty
+   var x;
+
+  // x==''
+  // x==undefined x==null x=='' x==-1
+
+
+   if(x){
+    document.getElementById('demo').innerHTML= "";
+   }else{
+    document.getElementById('demo').innerHTML= "enter username"; 
+   }
+
+   if(y){
+    document.getElementById('demo1').innerHTML= "";
+   }else{
     document.getElementById('demo1').innerHTML= "enter password";
    }
  }

@@ -37,21 +37,21 @@
 			<li>listitem5</li>
 		</ul>
 	</div>
-<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<!-- <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script> -->
 <script type="text/javascript">
-$('.hide-form').click(function(){
-	$("#form1").hide();
-});
-$('.show-form').click(function(){
-	$("#form1").show();
-});
 
-$('.myul li').click(function(){
-	//$(this).hide();
-	$('.myul li').css({'color':'black','background':'none'});
-	$(this).css({'color':'white','background':'black'});
-	//debugger;
-});
+
+function myFunction(a, b) {
+    return a * b;
+}
+myArray = [10,2];
+console.log(myFunction.apply(myArray));
+
+console.log(myFunction.call(10, 2));
+myFunction(10,20);
+
+myFunction.call(10, 2);
+myFunction.apply(myArray)
 </script>
 </body>
 </html>
