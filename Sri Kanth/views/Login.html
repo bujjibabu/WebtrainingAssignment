@@ -20,7 +20,9 @@
 	.btn{
 		border-radius: 20px;
 	}
-
+	.errorclass{
+		border: 2px solid red;
+	}
 </style>
 </head>
 <body class=" backgcls">
@@ -51,7 +53,7 @@
 			  </div>
 			  <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-primary loginClass">Login </button>
+			      <button type="button" class="btn btn-primary loginClass">Login </button>
 			    </div>
 			  </div>
 			  <div class="form-group">
@@ -72,28 +74,24 @@
 <script type="text/javascript"> 
 	$(document).ready(function(){
 		$('.loginClass').click(function(){
-			
+			debugger;
 			var emailVal=/^\w+([\-.]?\w+)*@\w+([\-.]?\w+)*(\.\w{2,3})+$/;
 			var evar=$(' #emailId ').val();
 			var pvar=$(' #pwdId ').val();
 			var eadm = 'admin@ad.com';
 			var padm = 'admin';
 			
-						  // alert( evar );
-			if (evar.match(emailVal) ) {
-				if (pvar.match(adm)) {
-					window.location="http://stackoverflow.com";
-				   }
-				 // alert( "Enter valid email"); 
-				//$('.emailClass').css({border:'1px solid red'}  );
+			if (evar.match(emailVal) && pvar){
+				$('#emailId').removeClass('errorclass')
+				if(evar=='admin@ad.com' && pvar =='admin'){
+					window.location="http://stackoverflow.com"
+				}else{
+					alert('enter registered details');
+				}
+			}else{
+				$('#emailId').addClass('errorclass');
+				//alert('enter valid username or password');
 			}
-			// else {if (evar.match(adm)) {
-			// 	// alert( "a"); 
-			// 	$('.emailClass').css({border:'1px solid red'}  );
-			// 	// window.location="http://stackoverflow.com";
-			// }};
-				
-
 		});	
 	});	
 
