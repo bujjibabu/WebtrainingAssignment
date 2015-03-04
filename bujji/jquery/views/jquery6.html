@@ -1,0 +1,52 @@
+<Doctype html>
+<html>
+<head>
+<title>jquery</title>
+<link rel="stylesheet" type="text/css" href="../../bootstrapsession/css/bootstrap.css">
+<STYLE TYPE="text/css">
+.myul li{
+	display: inline;
+	padding:10px 60px;
+	background: green;
+}
+.myul li:hover{
+	background: red;
+}
+.myactiveclass{
+	background: black !important;
+	color:#fff;
+}
+.myownclass{
+	background: black;
+	color:white;
+}
+</STYLE>
+</head>
+<body class="container">
+<div>addClass</div>
+<ul class="myul">
+<li>menu1</li>
+<li>menu2</li>
+<li>menu3</li>
+<li>menu4</li>
+<li>menu5</li>
+</ul>
+<div class="mydiv"> this is my div data
+<p class="mypara"> this is my paragraph data</p>
+</div>
+
+<div class="sometext"> this is my sometext div data</div>
+
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$('.myul li').click(function(){
+		$('.myul li').removeClass('myactiveclass');
+		$(this).addClass('myactiveclass');
+		$('.mydiv,.mypara,.sometext').addClass('myownclass text-center');
+		$('.mydiv .mypara').addClass('myownclass text-danger');
+		//$(this).toggleClass('myactiveclass');
+	});
+</script>
+</body>
+</html>

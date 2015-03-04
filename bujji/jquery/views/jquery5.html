@@ -1,0 +1,60 @@
+<Doctype html>
+<html>
+<head>
+<title>jquery</title>
+<link rel="stylesheet" type="text/css" href="../../bootstrapsession/css/bootstrap.css">
+</head>
+<body class="container">
+<div class="div1"> i have some div content i have some div content i have some div content i have some div content i have some div content i have some div content i have some div content i have some div content i have some div content </div>
+<input type="text" class="inputdata" value="this is input text box"/>
+<div class="btn btn-danger getinputdata" >getdata</div>
+<h1>Setting the data</h1>
+<div class="setdivdata"></div>
+<div class="setdivhtmldata"></div>
+<input class="setinputvalue" value="some value" >
+<div class="setatr btn btn-warning">setattr()</div>
+<div><a id="test">seeting attr</a></div>
+<ul class="myul">my list
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+</ul>
+<p class="removediv"> delete text delete text delete text</p>
+<div class="btn btn-danger myremove">Remove()</div>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+/* getting the data using jquery start*/
+	var mydiv = $('.div1').text();
+	var mydiv1 = $('.div1').html();
+	console.log('from text method',mydiv);
+	console.log('from html method',mydiv1);
+	var myinputdata = null;
+	//console.log(myinputdata);
+	$('.getinputdata').click(function(){
+		myinputdata = $('.inputdata').val();
+		console.log(myinputdata);
+	});
+/* getting the data using jquery ending*/
+
+/*setting the data using jquery starting*/
+
+$('.setdivdata').text('this is set text ');
+$('.setdivhtmldata').html('this is set using thml text <b> bujji </b> <div class="text-danger"> some div data</div>');
+$('.setinputvalue').val('changed value or new value');
+/*setting the data using jquery ending*/
+$('.setatr').click(function(){
+	$('#test').attr('href','https://www.google.co.in/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8');
+	$('#test').attr('title','this is new title');
+})
+//var backenddata = 'list4'
+$('.myul').append('<li>listitem4</li>');
+//$('.myul').prepend('<li>listitem0</li>');
+
+$('.myremove').click(function(){
+	//$('.myul').remove();
+	$('.myul').hide();
+})
+</script>
+</body>
+</html>

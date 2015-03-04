@@ -13,6 +13,7 @@
 			<label>UserName</label>
 				<br>
 			<input class="form-control" id="email1" type="Email" placeholder="Enter Username"/>
+			<p class="errormsg"></p>
 				<p class="clearfix">
 				<p class="clearfix">
 			<label>Password</label>
@@ -20,13 +21,14 @@
 			<input class="form-control" id="pswd1" type="password" placeholder="Password"/>
 				<p class="clearfix">
 				<br>
-			<button class="btn btn-primary" onclick="fctn1()">Login</button>
+			<button class="btn btn-primary login" >Login</button>
 				<br>
 				<p class="clearfix">
 			
 			<button type="button" class="btn btn-primary" data-toggle="modal" 
 			data-target="#myModal">Create Account</button>
-				<div class="modal fade">
+
+				<div class="modal fade" id="myModal">
 					 <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -77,29 +79,28 @@
 			<!--<script type="text/javascript" src="../CSS/jquery-migrate-1.2.1.min-2.js">
 			</script>-->
 			
-			<script type="text/javascript" src="../CSS/jquery-1.11.2.min.js">	
-			</script>
+			<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"> </script>
 			<script type="text/javascript">
 						// $('#myModal').on('shown.bs.modal',function () {
 				  //   	$('#myInput').focus()
 				  // 		});
+						$('.login').click(function(){debugger;
+							var x = $('#email1').val();
+							var y = $('#pswd1').val();
+							
+							/*if(!x == '') {
+							document.getElementById('email1').innerHTML = 'Enter a Valid Name';
+						}else{
+							document.getElementById('email1').innerHTML = ' ';
+						}
+						if(!y == '') {
+							document.getElementById('pswd1').innerHTML = 'Enter a Valid password';
+						}else{
+							document.getElementById('pswd1').innerHTML = ' ';
+						}*/
 
-			function fctn1(){
-				var x = document.getElementById('email1').value;
-				var  y = document.getElementById('pswd1').value;
-				
-				if(!x == '') {
-				document.getElementById('email1').innerHTML = 'Enter a Valid Name';
-			}else{
-				document.getElementById('email1').innerHTML = ' ';
-			}
-			if(!y == '') {
-				document.getElementById('pswd1').innerHTML = 'Enter a Valid password';
-			}else{
-				document.getElementById('pswd1').innerHTML = ' ';
-			}
-		};	
+						});
 		
 		</script>
 </body>
