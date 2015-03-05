@@ -1,21 +1,127 @@
 <!doctype html>
-<html>
+<html ng-app="">
 <head>
 <title>Angular</title>
-<link rel="stylesheet" type="text/css" href="../../bootstrapsession/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
 </head>
 
-<body ng-app="">
-	<div class="container">
-		Your Name:<input type="text" placeholder="enter your name" ng-model="myname"/>
+<body ng-controller="myCtrl">
+	<div class="container" ng-init="myname='Bujjibabu'; myobjreverse = false;"  >
+		Your Name:<input type="text" class="classname" placeholder="enter your name" ng-model="myname"/>
 		<div>Hello : {{myname}}</div>
 		<div>Hello : <span ng-bind="myname"></span></div>
+		<div class="btn btn-primary" ng-click="fnClick();">cleck here</div>
+	</div>
+	<div>
+		<div class="text-primary"><h1>Simple table with data Binding</h1></div>
+
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>S.No</th>
+					<th>Name</th>
+					<th>FirstName</th>
+					<th>LastName</th>
+					<th>DOB</th>
+					<th>Desc</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td ng-bind="userObj.sno"></td>
+					<td ng-bind="userObj.name"></td>
+					<td ng-bind="userObj.fname"></td>
+					<td ng-bind="userObj.laname"></td>
+					<td ng-bind="userObj.dob"></td>
+					<td ng-bind="userObj.desc"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="text-primary"><h1>Array data Binding </h1></div>
+		<div>Search <input type="text" ng-model="searchmodel" placeholder="search here"></div>
+		<br/>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th ng-click="myobjreverse = !myobjreverse; sortingorder='sno'">S.No</th>
+					<th ng-click="sortingorder='name'; myobjreverse = !myobjreverse;">Name</th>
+					<th ng-click="sortingorder='fname'; myobjreverse = !myobjreverse;">FirstName</th>
+					<th ng-click="sortingorder='laname';myobjreverse = !myobjreverse;">LastName</th>
+					<th ng-click="sortingorder='dob';myobjreverse = !myobjreverse;">DOB</th>
+					<th ng-click="sortingorder='desc';myobjreverse = !myobjreverse;">Desc</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="myobj in myArray | filter:searchmodel | orderBy : sortingorder : myobjreverse">
+					<td ng-bind="myobj.sno"></td>
+					<td ng-bind="myobj.name"></td>
+					<td ng-bind="myobj.fname"></td>
+					<td ng-bind="myobj.laname"></td>
+					<td ng-bind="myobj.dob"></td>
+					<td ng-bind="myobj.desc"></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
-<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script type="text/javascript" src="../jquery/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.js"></script>
 <script type="text/javascript">
+	function myCtrl($scope){
+		 //ng-init="myobjreverse=true"
+		//$scope.myobjreverse = true;
+				$scope.userObj={
+			fname : "bujji",
+			laname:"balaga",
+			sno:1,
+			name: "bujjibabu",
+			dob:'06/06/1988',
+			desc:'this is bujji tech lead'
+		};
 
+		$scope.myArray = [
+			{
+				fname : "bujji",
+				laname:"balaga",
+				sno:1,
+				name: "bujjibabu",
+				dob:'06/06/1988',
+				desc:'this is bujji tech lead'
+			},
+			{
+				fname : "prakesh",
+				laname:"s",
+				sno:2,
+				name: "prakesh",
+				dob:'06/06/1989',
+				desc:'this is prakesh tech lead'
+			},
+			{
+				fname : "anila",
+				laname:"d",
+				sno:3,
+				name: "anila",
+				dob:'06/06/1980',
+				desc:'this is anila tech lead'
+			},
+			{
+				fname : "bujjixyz",
+				laname:"xyz",
+				sno:4,
+				name: "babu",
+				dob:'06/06/1988',
+				desc:'this is bujji tech lead'
+			},{
+				fname : "test",
+				laname:"te",
+				sno:5,
+				name: "test name",
+				dob:'06/06/1988',
+				desc:'this is buj tech lead'
+			}
+		];
+	}
 </script>
 </body>
 </html>
