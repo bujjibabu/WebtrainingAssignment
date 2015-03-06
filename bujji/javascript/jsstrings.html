@@ -40,27 +40,28 @@
 </div>
 
 <script type="text/javascript"> 
-	function fnPrint(){
-		//alert('testing');
-		document.getElementById('print').style.display='none';
-		window.print();		
-	}
-	function fnHideTable(){
-		document.getElementById('tableid').style.display='none';
-	}
-	function fnChangeStyle(){
-		document.getElementById('tableid').style.color='white';
-		document.getElementById('tableid').style.background='black';
-	}
-	function fnShowTable(){
-		document.getElementById('tableid').style.display='block';
-	}
-	var  y =20; //global variable
+	// function fnPrint(){
+	// 	//alert('testing');
+	// 	document.getElementById('print').style.display='none';
+	// 	window.print();		
+	// }
+	// function fnHideTable(){
+	// 	document.getElementById('tableid').style.display='none';
+	// }
+	// function fnChangeStyle(){
+	// 	document.getElementById('tableid').style.color='white';
+	// 	document.getElementById('tableid').style.background='black';
+	// }
+	// function fnShowTable(){
+	// 	document.getElementById('tableid').style.display='block';
+	// }
+	var  x =20; //global variable
 	function fnFunction1(){
-		x = 10;   // local var scope
+		x = 'h';   // local var scope
 		alert(x);
 		//alert(y);
 	}
+	alert(x);
 	function fnFunction2(){
 		//alert(y);
 		//alert(x);
@@ -71,30 +72,30 @@
 	}
 	//strings
 
-	var myStringObj = 'this is my bujjibabu';
-	//alert(myStringObj.length);
-	var charat1 = myStringObj.charAt(4);
-	var charat = myStringObj.charCodeAt(0);
-	var string1 = "bujji";
-	var string2 = " babu";
-	//var string3 = string1+" "+string2;
-	var string3 = string1.concat(" "+string2);
-	var arry1 = [1,2,4,7];
-	var array2 =[5,6];
-	var array3 = arry1+array2;
-	var string3 = ("this is my second name"+ " ").concat(" "+string2);
-	//console.log(string3);
-	//console.log(array3.length);
-	var mystring = "please find where find occures";
-debugger;
-var indexof = mystring.indexOf('find');
-var lastindexof = mystring.lastIndexOf('find');
-var search = mystring.search('find');
-	//alert(search);
-	debugger;
-	var myArray = "bujji babu mohan raja";
-	myArray.substring(6,23);
-	alert(myArray);
+// 	var myStringObj = 'this is my bujjibabu';
+// 	//alert(myStringObj.length);
+// 	var charat1 = myStringObj.charAt(4);
+// 	var charat = myStringObj.charCodeAt(0);
+// 	var string1 = "bujji";
+// 	var string2 = " babu";
+// 	//var string3 = string1+" "+string2;
+// 	var string3 = string1.concat(" "+string2);
+// 	var arry1 = [1,2,4,7];
+// 	var array2 =[5,6];
+// 	var array3 = arry1+array2;
+// 	var string3 = ("this is my second name"+ " ").concat(" "+string2);
+// 	//console.log(string3);
+// 	//console.log(array3.length);
+// 	var mystring = "please find where find occures";
+// debugger;
+// var indexof = mystring.indexOf('find');
+// var lastindexof = mystring.lastIndexOf('find');
+// var search = mystring.search('find');
+// 	//alert(search);
+// 	debugger;
+// 	var myArray = "bujji babu mohan raja";
+// 	myArray.substring(6,23);
+// 	alert(myArray);
 </script>
 </body>
 </html>
