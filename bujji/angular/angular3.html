@@ -1,0 +1,186 @@
+<!doctype html>
+<html ng-app="">
+<head>
+<title>Angular</title>
+<link rel="stylesheet" type="text/css" href="../bootstrapsession/css/bootstrap.css">
+</head>
+<body ng-controller="myCtrl" class="col-sm-12">
+		<div class="text-primary"><h1>Simple table with data Binding</h1></div>
+		<table class="table table-bordered table-hover table-striped table-responsive">
+			<thead>
+				<tr class="bg-success">
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+					<th>BusinessName1</th>
+					<th>corporation1</th>
+					<th>value1</th>
+					<th>BusinessName2</th>
+					<th>corporation2</th>
+					<th>value2</th>
+					<th>reason</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in myArray">
+					<td><span ng-bind="$index"></span></td>
+					<td ng-click="fnDelete($index)"><span data-ng-show="$index!=0" class="glyphicon glyphicon-remove-circle"></span></td>
+					<td>
+						<select ng-model="obj.business1">
+							<option value="" disabled>Select</option>
+							<option ng-repeat="opt in businessObjects" value="{{opt.option}}">{{opt.option}}</option>
+							
+						</select>
+					</td>
+					<td><input type="text" placeholder="enter text" ng-model="obj.corporation1"></td>
+					<td><input type="text" placeholder="enter value" ng-model="obj.value1"></td>
+					<td>
+						<select ng-model="obj.business2">
+							<option value="" disabled>Select</option>
+							<option ng-repeat="opt in businessObjects" value="{{opt.option}}">{{opt.option}}</option>
+						</select>
+					</td>
+					<td><input type="text" placeholder="enter text" ng-model="obj.corporation2"></td>
+					<td><input type="text" placeholder="enter value" ng-model="obj.value2"></td>
+					<td><input type="text" placeholder="enter value" ng-model="obj.reason"></td>
+					<td ng-click="fnAdd();" ><a href="javascript:void(0)" ng-show="$index==0">+</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="col-sm-12 text-right">
+			<div class="col-sm-offset-6 col-sm-6">
+				<div class="btn btn-default" data-toggle="modal" ng-click="fnCreate()" data-target="#myModal" >Create</div>
+				<div class="btn btn-default" ng-click="fnCancel()">Clear</div>
+			</div>
+		</div>
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		       <table class="table table-bordered table-hover table-striped table-responsive">
+		       		<thead>
+						<tr class="bg-warning">
+							<th>BusinessName1</th>
+							<th>corporation1</th>
+							<th>value1</th>
+							<th>BusinessName2</th>
+							<th>corporation2</th>
+							<th>value2</th>
+							<th>reason</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="newobj in resultArray">
+							<td ng-bind="newobj.business1"></td> 
+							<td ng-bind="newobj.corporation1"></td> 
+							<td ng-bind="newobj.value1"></td> 
+							<td ng-bind="newobj.business2"></td> 
+							<td ng-bind="newobj.corporation2"></td> 
+							<td ng-bind="newobj.value2"></td> 
+							<td ng-bind="newobj.reason"></td>
+						</tr>
+					</tbody>
+		       </table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" ng-click="fnSubmit()">Submit</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+<script type="text/javascript" src="../jquery/js/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.js"></script>
+<script type="text/javascript">
+	function myCtrl($scope){
+		$scope.businessObjects = [
+			{id:1, option:'AP'},
+			{id:2, option:'CA'},
+			{id:3, option:'CI'},
+			{id:4, option:'TS'}
+		];
+
+		$scope.initvalue = function(){
+			$scope.myArray = [{
+				business1 : "",
+				corporation1 :"",
+				value1 :"",
+				business1:"",
+				corporation2 :"",
+				value2:"",
+				reason:""
+			}];
+		}
+	$scope.initvalue();
+	$scope.fnAdd = function(){
+		$scope.myArray.unshift({
+			business1 : "",
+			corporation1 :"",
+			value1 :"",
+			business1:"",
+			corporation2 :"",
+			value2:"",
+			reason:""
+		});
+	}
+	$scope.fnDelete = function(a){
+		$scope.myArray.splice(a,1);
+	}
+	$scope.fnCancel = function(){
+		$scope.initvalue();
+	}
+	$scope.fnCreate = function(){
+		$scope.resultArray = angular.copy($scope.myArray);
+	};
+	$scope.fnSubmit = function(){
+		console.log($scope.resultArray);
+		//jquery ajax call
+		$.ajax({
+			  type: "POST",
+			  url: '192.168.201.48/angular/methodname',
+			  datatype:'json',
+			  data : $scope.resultArray,
+			  success: function(data){
+			  	$scope.responseData = data;
+			    alert('success');
+			  },
+			  error: function(){
+			   alert('error');
+			  }
+			});
+
+	// diff ajax call
+		$.ajax({
+		  type: "POST",
+		  url: "server url",
+		  data: { name: "bujjiBabu", location: "hyderabad" }
+		}).done(function( msg ) {
+		    alert( "Data Saved: " + msg );
+		  }).fail(function(msg){
+		    alert( "Data Saved: " + msg );
+		});
+
+		// angular rest call
+
+		$http.get('/someUrl').success(function(data) {
+
+		  }).error(function(data) {
+
+		  });
+
+	}	
+}
+</script>
+</body>
+</html>
