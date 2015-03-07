@@ -6,6 +6,12 @@
 </head>
 <body ng-controller="myCtrl" class="col-sm-12">
 		<div class="text-primary"><h1>Simple table with data Binding</h1></div>
+		<table class="table">
+			<tr ng-repeat="testobj in imagesobjects">
+				<td>imag</td>
+				<td><img ng-src="{{testobj.imgpath}}"></td>
+			</tr>
+		</table>
 		<table class="table table-bordered table-hover table-striped table-responsive">
 			<thead>
 				<tr class="bg-success">
@@ -24,6 +30,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="obj in myArray">
+					
 					<td><span ng-bind="$index"></span></td>
 					<td ng-click="fnDelete($index)"><span data-ng-show="$index!=0" class="glyphicon glyphicon-remove-circle"></span></td>
 					<td>
@@ -104,6 +111,11 @@
 <script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.js"></script>
 <script type="text/javascript">
 	function myCtrl($scope){
+		$scope.imagesobjects = [
+		{imgpath:"http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/simple-red-square-icons-social-media-logos/129650-simple-red-square-icon-social-media-logos-google-logo-square.png"},
+		{imgpath:"http://cdn.flaticon.com/png/256/33975.png"},
+		{imgpath:"https://cdn4.iconfinder.com/data/icons/black-icon-social-media/256/099317-google-g-logo.png"},
+		];
 		$scope.businessObjects = [
 			{id:1, option:'AP'},
 			{id:2, option:'CA'},
@@ -119,7 +131,7 @@
 				business1:"",
 				corporation2 :"",
 				value2:"",
-				reason:""
+				reason:"",
 			}];
 		}
 	$scope.initvalue();
