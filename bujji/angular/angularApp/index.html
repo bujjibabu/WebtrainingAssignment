@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- define angular app -->
+<html data-ng-app="myApp">
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.css" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="homeController">
+
+	<!-- header html starting-->
+		<div data-ng-include="'header.html'"></div>
+	<!-- header html end-->
+
+	<!-- main body starts-->
+	  <div>
+	    <div ng-view></div>
+	  </div>
+	<!-- main body end-->
+
+	<!--footer starts -->
+		<div data-ng-include="'footer.html'"></div>
+	<!--footer ending -->
+
+</body>
+</html>

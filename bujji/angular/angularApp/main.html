@@ -1,0 +1,25 @@
+<div class="container">
+	<table class="table table-hover table-bordered">
+		<tr>
+			<td> 
+				<select ng-model="selectymodel">
+					<option ng-repeat="opt in options">{{opt.name}}</option>
+				</select>
+			</td>
+			<td>
+				<div ng-show="selectymodel=='option1'">
+					<input type="checkbox"> sample
+				</div>
+				<div ng-show="selectymodel=='option2'">
+					<input type="text"> sample
+				</div>
+				<div ng-show="selectymodel=='option3'">
+					<select>
+						<option>opt1</option>
+						<option>opt2</option>
+						<option>opt3</option>
+					</select>
+			</td>
+		</tr>
+	</table>
+</div>
